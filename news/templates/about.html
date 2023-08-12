@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+  <!-- BEGIN content -->
+  <div id="content">
+    <!-- begin post -->
+    <div class="single">
+      <h2>About Us</h2>
+      <p>This is an example of a WordPress page, you could edit this to put information about yourself or your site so readers know where you are coming from. You can create as many pages like this one or sub-pages as you like and manage all of your content inside of WordPress.</p>
+    </div>
+    <!-- end post -->
+  </div>
+  <!-- END content -->
+  <!-- BEGIN sidebar -->
+  <div id="sidebar">
+    <!-- begin ads -->
+    <div class="ads"> <a href="#"><img src="{% static 'images/ad125x125.jpg' %}" alt="" /></a> <a href="#"><img src="{% static 'images/ad125x125.jpg' %}" alt="" /></a> <a href="#"><img src="{% static 'images/ad125x125.jpg'%}" alt="" /></a> <a href="#"><img src="{% static 'images/ad125x125.jpg' %}" alt="" /></a> </div>
+    <!-- end ads -->
+    <!-- begin search -->
+    <form class="searchh" action="">
+      <input type="text" name="country" id="s" placeholder="Search by country" />
+      <button type="submit" class="btn">Search</button>
+    </form>
+    <!-- end search -->
+    <div class="wrapper">
+      <!-- begin popular posts -->
+      <!-- <h2>Popular Posts</h2>
+      <ul>
+        {% for nws in populer %}
+        <li><a href="{{nws.url}}" target="_blank">{{nws.title}}</a></li> 
+        <li><a href="#">Top 100 Internet Marketing Tips</a></li>
+        <li><a href="#">Tutorial: How to add Videos in your Post</a></li>
+        <li><a href="#">Sample Post Unordered List</a></li>
+        <li><a href="#">Sample Post Blockquote</a></li>
+        {% endfor %}
+      </ul> -->
+      <!-- end popular posts -->
+      <!-- begin flickr photos -->
+      <h2>Flickr Photos</h2>
+      <div class="flickr"> <a href="#"><img src="{% static 'images/_thumb3.jpg'%}" alt="" /></a> <a href="#"><img src="{% static 'images/_thumb4.jpg'%}" alt="" /></a> <a href="#"><img src="{% static 'images/_thumb5.jpg' %}" alt="" /></a> <a href="#"><img src="{% static 'images/_thumb6.jpg'%}" alt="" /></a> <a href="#"><img src="{% static 'images/_thumb7.jpg' %}" alt="" /></a> <a href="#"><img src="{% static 'images/_thumb8.jpg' %}" alt="" /></a> </div>
+      <!-- end flickr photos -->
+      <!-- begin featured video -->
+      <h2>Featured Video</h2>
+      <div class="video"> <img src="{% static 'images/_video.jpg'%}" alt="" /> </div>
+      <!-- end featured video -->
+      <!-- begin tags -->
+      <h2>Tags</h2>
+      <div class="tags"> </div>
+      <!-- end tags -->
+      <!-- BEGIN left -->
+      <div class="l sbar">
+        <!-- begin categories -->
+        <h2>Categories</h2>
+        <ul>
+          <li><a href="{% url 'home' %}?category=business">Business</a></li>
+          <li><a href="{% url 'home' %}?category=entertainment">Entertainment</a></li>
+          <li><a href="{% url 'home' %}?category=general">General</a></li>
+          <li><a href="{% url 'home' %}?category=health">Health</a></li>
+          <li><a href="{% url 'home' %}?category=science">Science</a></li>
+          <li><a href="{% url 'home' %}?category=sports">Sports</a></li>
+          <li><a href="{% url 'home' %}?category=technology">Technology</a></li>
+        </ul>
+        <!-- end categories -->
+        <!-- begin pages -->
+        <!-- <h2>Pages</h2>
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="about">About</a></li>
+          <li><a href="#">Archives</a></li>
+          <li><a href="#">Links</a></li>
+          <li><a href="contect">Contact</a></li>
+          <li><a href="#">Sitemap</a></li>
+        </ul> -->
+        <!-- end pages -->
+      </div>
+      <!-- END left -->
+      <!-- BEGIN right -->
+      <div class="r sbar">
+         <!-- begin pages -->
+         <h2>Pages</h2>
+         <ul>
+           <li><a href="">Home</a></li>
+           <li><a href="about">About</a></li>
+           <li><a href="#">Archives</a></li>
+           <li><a href="#">Links</a></li>
+           <li><a href="contect">Contact</a></li>
+           <li><a href="#">Sitemap</a></li>
+         </ul>
+         <!-- end pages -->
+        <!-- begin archives -->
+        <!-- <h2>Archives</h2>
+        <ul>
+          <li><a href="#">August 2008</a></li>
+          <li><a href="#">July 2008</a></li>
+          <li><a href="#">June 2008</a></li>
+          <li><a href="#">May 2008</a></li>
+          <li><a href="#">April 2008</a></li>
+          <li><a href="#">March 2008</a></li>
+        </ul> -->
+        <!-- end archives -->
+        <!-- begin blogroll -->
+        <!-- <h2>Blogroll</h2>
+        <ul>
+          {% for nws in populer %}
+          <li><a href="#">{{nws.source.id}}</a></li>
+          {% endfor %}
+        </ul> -->
+        <!-- end blogroll -->
+        <!-- begin meta -->
+        <h2>Meta</h2>
+        <ul>
+          <li><a href="#">Login</a></li>
+        </ul>
+        <!-- end meta -->
+      </div>
+      <!-- END right -->
+    </div>
+  </div>
+  <!-- END sidebar -->
+  {% endblock %}

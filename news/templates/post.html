@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div id="content">
+    <!-- begin post -->
+    {% for p in posts %}
+    <div class="post">
+      <div class="thumb"><a href="#" target="_blank"><img src="{{p.img}}" alt="" /></a></div>
+      <h2><a href="#" target="_blank">{{p.title}}</a></h2>
+      <p class="date">{{p.author}} by admin</p>
+      <p>{{p.Discription}}</p>
+      <a class="continue" href="{{nws.url}}" target="_blank">Continue Reading</a> </div>
+      {% endfor %}
+    <!-- end post -->
+    <!--  -->
+    <!-- begin post navigation -->
+    <div class="postnav">
+      <ul>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">&raquo;</a></li>
+      </ul>
+      <div class="break"></div>
+    </div>
+    <!-- end post navigation -->
+  </div>
+
+
+{% endblock %}

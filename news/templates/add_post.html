@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form method="POST">
+  <div class="">
+    <label  class="form-label">Post Title</label><br>
+    <input class="form-control"  >
+  </div>
+  <div class="">
+    <label  class="form-label">author</label><br>
+    <input class="form-control" type="text" >
+  </div>
+  
+  <div class="">
+    <label  class="form-label">Discription</label><br>
+    <input class="form-control" type="text"  >
+  </div>
+  
+  <div class="">
+    <label  class="form-label">Detailed_post</label><br>
+    <input class="form-control" type="text" >
+  </div>
+  <div class="">
+    <label  class="form-label">Image</label><br>
+    <input class="form-control" type="image" >
+  </div>
+  
+
+  
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock %}
