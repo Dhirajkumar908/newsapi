@@ -66,5 +66,14 @@ def News_post(request):
     return render(request, 'post.html', Context)
 
 def add_post(request):
-
-    return render(request, 'add_post.html')
+    if request.method=="POST":
+        form=postForm(request.POST)
+        if form.is_valid():
+            try:
+                form.save()
+                return redirect('/News_post')
+            except:
+                pass
+    else:
+        form=postForm()
+    return render(request, 'add_post.html',{'form':form})

@@ -14,6 +14,6 @@ class post(models.Model):
     author=models.CharField(max_length=100)
     Discription=models.CharField(max_length=350)
     Detailed_post=models.CharField(max_length=1500)
-    img=models.ImageField(upload_to='media')
+    img=models.ImageField(upload_to='media', null=True)
     def __str__(self):
         return self.title

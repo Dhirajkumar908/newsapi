@@ -1,32 +1,35 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block content %}
 
 <form method="POST">
+  {% csrf_token %}
   <h1>this post page</h1>
-  <div class="">
+  
+   <div class="">
     <label  class="form-label">Post Title</label><br>
-    <input class="form-control"  >
+    {{form.title}}
   </div>
   <div class="">
     <label  class="form-label">author</label><br>
-    <input class="form-control" type="text" >
+    {{form.author}}
   </div>
   
   <div class="">
     <label  class="form-label">Discription</label><br>
-    <input class="form-control" type="text"  >
+    {{form.Discription}}
   </div>
   
   <div class="">
     <label  class="form-label">Detailed_post</label><br>
-    <input class="form-control" type="text" >
+    {{form.Detailed_post}}
   </div>
   <div class="">
     <label  class="form-label">Image</label><br>
     <input class="form-control" type="image" >
-  </div>
-  
+  </div> 
 
   
   <button type="submit" class="btn btn-primary">Submit</button>
