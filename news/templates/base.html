@@ -20,7 +20,7 @@
       
       <li><a href="contact">Contact Page</a></li>
     </ul>
-    <p class="links">Subscribe: <a href="{% url 'News_post' %}">Posts</a> | <a href="#">Comments</a> | <a href="contact">Email</a> </p>
+    <p class="links">Subscribe: <a href="add_post">Add Post</a> | <a href="#">Comments</a> | <a href="contact">Email</a> </p>
     <div class="break"></div>
     <div class="logo">
       <h1><a href="#">The Web News</a></h1>
@@ -36,7 +36,7 @@
       <li><a href="{% url 'home' %}?category=science">Science</a></li>
       <li><a href="{% url 'home' %}?category=sports">Sports</a></li>
       <li><a href="{% url 'home' %}?category=technology">Technology</a></li>
-      <li><a href="add_post">AddPost</a></li>
+      <li><a href="{% url 'News_post' %}">POST</a></li>
     </ol>
     <div class="break"></div>
   </div>

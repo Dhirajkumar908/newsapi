@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
+from django.http import HttpResponse, Http404
 from .models import post
 import requests
 from .form import *
@@ -57,23 +57,48 @@ def contact(request):
     }
     return render(request, 'contact.html', context)
 
+
 def News_post(request):
-    posts= post.objects.all()
-    
+    posts= post.objects.all()    
     Context={
         'posts':posts
     }
     return render(request, 'post.html', Context)
 
+
 def add_post(request):
     if request.method=="POST":
         form=postForm(request.POST)
+        
         if form.is_valid():
-            try:
-                form.save()
-                return redirect('/News_post')
-            except:
-                pass
+            form.save()
+            return redirect('/News_post')
+        else:   
+            return HttpResponse("<h1>There is some Error your Post is not added</h1>")
     else:
         form=postForm()
     return render(request, 'add_post.html',{'form':form})
+
+def show(request, title):
+    print(title)
+    try:
+        showPost = post.objects.get(title=title)  # Assuming your model is named 'post'
+        print(showPost)
+    except post.DoesNotExist:
+        # Handle the case where the post with the given ID doesn't exist
+        raise Http404("Post does not exist")
+
+    return render(request, 'show_post.html', {'showPost': showPost})
+ 
+
+
+
+
+
+
+
+
+
+
+
+ 

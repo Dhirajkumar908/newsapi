@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div>
+<div><img src="/media/{{showPost.img}}" alt="img">{{showPost.img}}</div>
+<h2>{{showPost.title}}</h2><br>
+<P> Author:{{showPost.author}}</P><br>
+<h4>{{showPost.Discription}}</h4><br>
+<P>{{showPost.Detailed_post}}</P><br>
+</div>
+
+
+{% endblock %}
+
+

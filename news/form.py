@@ -1,5 +1,5 @@
 from django import forms
-from django.forms import ModelForm, TextInput, Textarea, ImageField
+from django.forms import ModelForm, TextInput, Textarea, ClearableFileInput
 from . models import *
 
 class contectForm(ModelForm):
@@ -12,7 +12,7 @@ class contectForm(ModelForm):
 class postForm(ModelForm):
     class Meta:
         model=post
-        fields=["title",'author','Discription', 'Detailed_post',]      
+        fields=["title",'author','Discription', 'Detailed_post','img']      
         widgets = {
             'name': TextInput(attrs={'class': 'input-name'}),
             'author':TextInput(attrs={'class': 'input-autho'}),

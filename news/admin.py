@@ -8,4 +8,4 @@ class contectadmin(admin.ModelAdmin):
 
 @admin.register(post)
 class postmodel(admin.ModelAdmin):
-    list_display=['title', 'author']
+    list_display=['title', 'author','img']
