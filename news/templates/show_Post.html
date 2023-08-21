@@ -3,11 +3,13 @@
 
 {% block content %}
 <div>
-<div><img src="/media/{{showPost.img}}" alt="img">{{showPost.img}}</div>
-<h2>{{showPost.title}}</h2><br>
-<P> Author:{{showPost.author}}</P><br>
-<h4>{{showPost.Discription}}</h4><br>
-<P>{{showPost.Detailed_post}}</P><br>
+    <div><img src="{{ showPost.img.url }}" alt="img" style="width: 700px; height: 400px;"></div>
+    <div style="width: 700px; margin-bottom: 50px;">
+    <h2>{{showPost.title}}</h2><br>
+    <P> Author:{{showPost.author}}</P><br>
+    <h4>{{showPost.Discription}}</h4><br>
+    <P>{{showPost.Detailed_post}}</P><br>
+    </div>
 </div>
 
 

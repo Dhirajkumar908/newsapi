@@ -7,7 +7,9 @@ class contectForm(ModelForm):
         model=contect
 
         fields=["name","email","url","comment"]
-        widgets={}
+        widgets={
+            'name':TextInput(attrs={'class':'C_name'}),
+        }
 
 class postForm(ModelForm):
     class Meta:

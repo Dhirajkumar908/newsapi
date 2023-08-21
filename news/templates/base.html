@@ -15,12 +15,12 @@
   <!-- BEGIN header -->
   <div id="header">
     <ul>
-      <li class="f"><a href="/">Home</a></li>
-      <li><a href="about">About Us</a></li>
+      <li class="f"><a href="{% url 'home' %}">Home</a></li>
+      <li><a href="{% url 'about' %}">About Us</a></li>
       
-      <li><a href="contact">Contact Page</a></li>
+      <li><a href="{% url 'contact' %}">Contact Page</a></li>
     </ul>
-    <p class="links">Subscribe: <a href="add_post">Add Post</a> | <a href="#">Comments</a> | <a href="contact">Email</a> </p>
+    <p class="links">Subscribe: <a href="{% url 'add_post' %}">Add Post</a> | <a href="#">Comments</a> | <a href="{% url 'contact' %}">Email</a> </p>
     <div class="break"></div>
     <div class="logo">
       <h1><a href="#">The Web News</a></h1>

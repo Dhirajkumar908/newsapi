@@ -79,6 +79,7 @@ def add_post(request):
         form=postForm()
     return render(request, 'add_post.html',{'form':form})
 
+
 def show(request, title):
     print(title)
     try:
