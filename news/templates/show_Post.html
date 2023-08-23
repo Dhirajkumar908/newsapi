@@ -2,8 +2,9 @@
 {% load static %}
 
 {% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/detailpost.css' %}" />
 <div>
-    <div><img src="{{ showPost.img.url }}" alt="img" style="width: 700px; height: 400px;"></div>
+    <div class="post_img"><img src="{{ showPost.img.url }}" alt="img" style="width: 700px; height: 400px;"></div>
     <div style="width: 700px; margin-bottom: 50px;">
     <h2>{{showPost.title}}</h2><br>
     <P> Author:{{showPost.author}}</P><br>

@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+
 {% block content %}
   <!-- BEGIN content -->
   <div id="content">
@@ -14,9 +15,23 @@
       <div id="respond">
         <form  method="POST" action="contact">
           {% csrf_token %}
-          {{form.as_p}}
-         
-            <input type="submit" >
+          <div class="">
+            <label  class="form-label">Name</label><br>
+            {{form.name}}
+          </div><br>
+          <div class="">
+            <label  class="form-label">Email</label><br>
+            {{form.email}}
+          </div><br>
+          <div class="">
+            <label  class="form-label">Url</label><br>
+            {{form.url}}
+          </div><br>
+          <div class="">
+            <label  class="form-label">Comment</label><br>
+            {{form.comment}}
+          </div><br>
+            <input type="submit" style="width: 100px; background-color: rgb(37, 37, 37); color: white; border-radius: 5px;" >
         
         </form>
         <P>{{response}}</P>

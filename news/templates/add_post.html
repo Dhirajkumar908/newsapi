@@ -4,35 +4,47 @@
 
 {% block content %}
 
-<form method="POST">
+<link rel="stylesheet" type="text/css" href="{% static 'css/post.css' %}" />
+<form method="POST" class="p-from">
   {% csrf_token %}
-  <h1>this post page</h1>
-  
-   <div class="">
+  <h1 class="p-heading">Add Post Here</h1><br>
+  <div class="post-name">
+   <div class="p_t">
     <label  class="form-label">Post Title</label><br>
     {{form.title}}
-  </div>
+  </div><br>
   <div class="">
-    <label  class="form-label">author</label><br>
+    <label  class="form-label">Author</label><br>
     {{form.author}}
   </div>
-  
-  <div class="">
+</div><br>
+<div class="post-name">
+  <div class="p_a">
     <label  class="form-label">Discription</label><br>
     {{form.Discription}}
-  </div>
+    
+  </div><br>
   
   <div class="">
     <label  class="form-label">Detailed_post</label><br>
     {{form.Detailed_post}}
+   
   </div>
-  <div class="">
+</div>
+  <br>
+  <div class="post-name">
+  <div class="p_i">
     <label  class="form-label">Image</label><br>
     {{form.img}}
   </div> 
-
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
   <br>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" style="width: 100px;">Submit</button>
+</div>
   <br>
 </form>
 <br>

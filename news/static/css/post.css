@@ -1,4 +1,29 @@
-.input-name{
-    width: 300px;
-    background-color: brown;
+* {
+    margin: auto;
+}
+.input-name {
+    font-size: 20px;
+   
+}
+.input-author {
+    font-size: 20px;
+    
+}
+.form-label{
+    font-size: 20px;
+}
+.post-name{
+    display: flex;
+   
+}
+.p_i{
+    justify-content: left;
+}
+.p-heading{
+    margin: 20px;
+    padding: 10px;
+}
+.p-from{
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    background-color: white ;
 }
